@@ -3,3 +3,10 @@ theme: jekyll-theme-cayman
 title: pablo ugulino
 
 description: Página Pessoal e Portfólio
+
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
