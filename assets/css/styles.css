@@ -2,12 +2,16 @@
   height:auto;
   width: 70%;
   border-radius:50%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.28);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.28);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.28);
 }
 #welcoming {
   background: linear-gradient(to right, rgba(255,255,255,0), rgba(21, 153, 87, .2));
   padding:10px;
   margin-top:20px;
   margin-bottom:20px;
+  color:gray;
 }
 @media screen and (max-width: 558px) {
   #welcoming img{
