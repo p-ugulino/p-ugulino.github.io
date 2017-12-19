@@ -16,6 +16,9 @@
 .main-content hr{
   height:1px;
 }
+.page-header{
+  padding:1rem;
+}
 @media screen and (max-width: 558px) {
   #welcoming img{
     height:auto;
