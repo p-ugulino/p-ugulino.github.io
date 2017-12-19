@@ -18,7 +18,7 @@ body {
   margin-bottom:20px;
   color:silver;
 }
-h3 {
+.main-content h3 {
   color: rgb(23, 113, 145);
 }
 .main-content hr{
