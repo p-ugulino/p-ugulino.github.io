@@ -19,6 +19,7 @@ body {
 }
 .main-content hr{
   height:1px;
+  background-color: #3b3b3b;
 }
 .page-header{
   padding:1rem;
