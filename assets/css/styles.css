@@ -28,6 +28,9 @@ body {
 .page-header{
   padding:1rem;
 }
+.card{
+  margin-bottom:20px;
+}
 @media screen and (max-width: 558px) {
   #welcoming img{
     height:auto;
