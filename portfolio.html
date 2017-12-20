@@ -4,11 +4,16 @@ title: Portfólio
 ---
 
 <h1><b>PORTFÓLIO</b></h1>
-<ul>
+<div class="card-group">
   {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-    <img src="{{post.thumbnail}}" />
-  </li>
+  <div class="card">
+    <img class="card-img-top" src="{{post.thumbnail}}" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">{{post.title}}</h4>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><a class="btn btn-small btn-info">Ver mais</a></p>
+    </div>
+  </div>
   {% endfor %}
+<ul>
 </ul>
