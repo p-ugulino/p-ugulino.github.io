@@ -8,6 +8,7 @@ title: Portfólio
   {% for post in site.posts %}
   <li>
     <a href="{{ post.url }}">{{ post.title }}</a>
+    <img src="{{post.thumbnail}}" />
   </li>
   {% endfor %}
 </ul>
