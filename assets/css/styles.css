@@ -31,6 +31,9 @@ body {
 .card{
   margin-bottom:20px;
 }
+.card h4{
+  color: white;
+}
 @media screen and (max-width: 558px) {
   #welcoming img{
     height:auto;
