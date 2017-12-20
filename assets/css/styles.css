@@ -25,6 +25,9 @@ body {
   height:1px;
   background-color: #3b3b3b;
 }
+.main-content h1{
+  color: #1e7b6e
+}
 .page-header{
   padding:1rem;
 }
