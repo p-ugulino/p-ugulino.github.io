@@ -40,13 +40,17 @@
   <div class="container">
     <section class="main-content col-md-10 offset-md-1">
       <h1><b>{{page.title}}</b></h1>
+      <div class="row">
+        {% for tag in page.tags %}
+        <span class="badge badge-info">tag</span>
+        {% endfor %}
+      </div>
 
       {{content}}
 
       <div class="row justify-content-center gallery-posts">
         <div class="col-md-12">
           <div class="row">
-
             {% for p in page.photos %}
             <a href="{{p}}" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
               <img src="{{p}}" class="img-fluid img-thumbnail">
