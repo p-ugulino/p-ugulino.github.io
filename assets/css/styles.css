@@ -37,6 +37,10 @@ body {
 .card h4{
   color: white;
 }
+.gallery-posts img{
+  margin-bottom:10px;
+
+}
 @media screen and (max-width: 558px) {
   #welcoming img{
     height:auto;
