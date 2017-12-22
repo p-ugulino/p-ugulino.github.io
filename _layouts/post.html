@@ -41,9 +41,11 @@
     <section class="main-content col-md-10 offset-md-1">
       <h1><b>{{page.title}}</b></h1>
       <div class="row">
-        {% for tag in page.tags %}
-        <span class="badge badge-info">tag</span>
-        {% endfor %}
+        <p>
+          {% for tag in page.tags %}
+          <span class="badge badge-info">{{tag}}</span>
+          {% endfor %}
+        </p>
       </div>
 
       {{content}}
