@@ -44,7 +44,7 @@ body {
 }
 .padding-li li {
   padding:0; margin: 0;
-  padding-left:15px;
+  padding-left:5px;
 }
 @media screen and (max-width: 558px) {
   #welcoming img{
