@@ -22,56 +22,67 @@
 </head>
 <body>
 
-  <section class="page-header" style="background-image:url('/assets/img/bg.jpeg'); background-size:100%; background-repeat:no-repeat;background-position: center;">
-    <h1 class="project-name">&lt;{{ site.title | default: site.github.repository_name }}/&gt;</h1>
-    <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-    {% if site.github.is_project_page %}
-    <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-    {% endif %}
-    {% if site.show_downloads %}
-    <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-    <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-    {% endif %}
-    <a href="/" class="btn">/sobre</a>
-    <a href="/portfolio" class="btn">/portfolio</a>
-    <a href="/contact" class="btn">/contato</a>
-  </section>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark"
+  style="background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(to left, rgba(21, 153, 87, 0.298039), rgba(23, 113, 145, 0.298039));
+  background-origin: padding-box;
+  background-size: auto;
+  box-sizing: border-box;
+  color: rgb(192, 192, 192);">
+  <a class="navbar-brand" href="#"><b>&lt;{{site.title}}&gt;</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">/sobre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/portfolio">/portifolio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">/contato</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-  <div class="container">
-    <section class="main-content col-md-10 offset-md-1">
-      <h1><b>{{page.title}}</b></h1>
-      <p>
-        {% for tag in page.tags %}
-        <span class="badge badge-dark">{{tag}}</span>
-        {% endfor %}
-      </p>
+<div class="container">
+  <section class="main-content col-md-10 offset-md-1">
+    <h1><b>{{page.title}}</b></h1>
+    <p>
+      {% for tag in page.tags %}
+      <span class="badge badge-dark">{{tag}}</span>
+      {% endfor %}
+    </p>
 
-      {{content}}
+    {{content}}
 
-      <div class="row justify-content-center gallery-posts">
-        <div class="col-md-12">
-          <div class="row">
-            {% for p in page.photos %}
-            <a href="{{p}}" data-toggle="lightbox" data-gallery="example-gallery" class="col-3">
-              <img src="{{p}}" class="img-fluid img-thumbnail">
-            </a>
-            {% endfor %}
-          </div>
+    <div class="row justify-content-center gallery-posts">
+      <div class="col-md-12">
+        <div class="row">
+          {% for p in page.photos %}
+          <a href="{{p}}" data-toggle="lightbox" data-gallery="example-gallery" class="col-3">
+            <img src="{{p}}" class="img-fluid img-thumbnail">
+          </a>
+          {% endfor %}
         </div>
       </div>
+    </div>
 
-    </section>
-  </div>
+  </section>
+</div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-  <script>
-  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-  });
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+<script>
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
 </script>
 </body>
 </html>
