@@ -20,40 +20,43 @@
 </head>
 <body>
 
-  <section class="page-header" style="background-image:url('/assets/img/bg.jpeg'); background-size:100%; background-repeat:no-repeat;background-position: center;">
+  <section class="page-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(to left, rgba(21, 153, 87, 0.298039), rgba(23, 113, 145, 0.298039));
+    background-origin: padding-box;
+    background-size: auto;
+    box-sizing: border-box;
+    color: rgb(192, 192, 192);">
+    <a class="navbar-brand" href="#">{{site.title}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="navbar-text">
+      {{site.description}}
+    </span>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">/sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/portifolio">/portifolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">/contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</section>
 
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">{{site.title}}</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <span class="navbar-text">
-        {{site.description}}
-      </span>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">/sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/portifolio">/portifolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">/contato</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<div class="container">
+  <section class="main-content col-md-10 offset-md-1">
+    {{ content }}
   </section>
-
-  <div class="container">
-    <section class="main-content col-md-10 offset-md-1">
-      {{ content }}
-    </section>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
