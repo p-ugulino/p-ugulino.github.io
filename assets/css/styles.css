@@ -2,6 +2,7 @@ body {
   background-color: rgba(0, 0, 0, 0.83);
   color: silver;
   margin-top:40px;
+  font-family: 'Inconsolata', monospace;
 }
 #welcoming img {
   height:auto;
